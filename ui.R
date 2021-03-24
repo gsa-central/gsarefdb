@@ -1,7 +1,7 @@
 shinyUI(fluidPage(
   theme = "try.css",
   navbarPage(
-    # title="",
+    title="",
     # inverse = TRUE,
     tags$hr(),
     ##-- Title Header ----
