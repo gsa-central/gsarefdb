@@ -1,7 +1,7 @@
 shinyUI(fluidPage(
   theme = "try.css",
   navbarPage(
-    title="GSARefDB v1.5",
+    title="",
     div(img(src="GSACENTRAL_Logo.png", width = "100px", height = "50px"),
               style = "padding-left:5px;"),
     # inverse = TRUE,
@@ -40,6 +40,6 @@ shinyUI(fluidPage(
     tags$hr(),
     footer = tags$div(
       class = "text-center",
-      span(strong(h4("Last updated: March 24th, 2021")),
+      span(strong(h4("GSARefDB v1.5. Last updated: March 24th, 2021")),
            style = "color:gray")))
 ))
