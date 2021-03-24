@@ -39,6 +39,8 @@ shinyUI(fluidPage(
     selected = strong(h5("General Methods and Tools")),
     tags$hr(),
     footer = tags$div(
+      div(img(src="GSACENTRAL_Logo.png", width = "100px", height = "50px"),
+              style = "padding-left:5px;"),
       class = "text-center",
       span(strong(h4("GSARefDB v1.5. Last updated: March 24th, 2021")),
            style = "color:gray")))
