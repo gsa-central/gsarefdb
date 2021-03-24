@@ -2,7 +2,7 @@ shinyUI(fluidPage(
   theme = "try.css",
   navbarPage(
     title=div(img(src="GSACENTRAL_Logo.png", width = "100px", height = "50px"),
-              style = "padding-left:50px;"),
+              style = "padding-left:25px;"),
     # h4("GSA-ref-DB"),
     # inverse = TRUE,
     tags$hr(),
@@ -30,6 +30,8 @@ shinyUI(fluidPage(
              DT::dataTableOutput("DT7")),
     tabPanel(h5("Analysis"),
              shiny::plotOutput("plot",width = "100%", height = "1000px")),
+    tabPanel(h5("Citation Evolution"),
+             DT::dataTableOutput("DT8")),
     tabPanel(h5("Submit"),
              includeMarkdown("www/files/Submit.md")),
     tabPanel(h5("Archive"), 
