@@ -3,7 +3,7 @@ shinyUI(fluidPage(
   navbarPage(
     title=div(img(src="GSACENTRAL_Logo.png", width = "100px", height = "50px"),
               style = "padding-left:5px;"),
-    # h4("GSA-ref-DB"),
+    "GSARefDB",
     # inverse = TRUE,
     tags$hr(),
     ##-- Title Header ----
