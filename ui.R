@@ -1,13 +1,13 @@
 shinyUI(fluidPage(
   theme = "try.css",
   navbarPage(
-    title="",
-    div(img(src="GSACENTRAL_Logo.png", width = "100px", height = "50px"),
-              style = "padding-left:5px;"),
+    # title="",
     # inverse = TRUE,
     tags$hr(),
     ##-- Title Header ----
     tags$div(
+      div(img(src="GSACENTRAL_Logo.png", width = "100px", height = "50px"),
+              style = "padding-left:5px;"),
       class = "text-center",
       span(strong(h2("GSARefDB - The Gene Set Analysis Reference Database")),
            style = "color:steelblue")),
