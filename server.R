@@ -14,7 +14,8 @@ shinyServer(function(input, output, session){
                     "ncGdata" = ncGdata,
                     "MSdata" = MSdata,
                     "MGdata" = MGdata,
-		    "Indata" = Indata)
+		    "Indata" = Indata,
+		    "History" = history)
   )
   
 
@@ -27,7 +28,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h5('General methods and tools')
+                    htmltools::h4('General methods and tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -54,7 +55,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h5('Reviews and benchmarks')
+                    htmltools::h4('Reviews and benchmarks')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -84,7 +85,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h5('Genomic GSA tools')
+                    htmltools::h4('Genomic GSA tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -113,7 +114,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h5('GSA tools for ncRNA data')
+                    htmltools::h4('GSA tools for ncRNA data')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -142,7 +143,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h5('GSA tools for MS-based data')
+                    htmltools::h4('GSA tools for MS-based data')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -171,7 +172,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h5('Metagenomics GSA tools')
+                    htmltools::h4('Metagenomics GSA tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -200,7 +201,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h5('Integromics GSA tools')
+                    htmltools::h4('Integromics GSA tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -216,6 +217,35 @@ shinyServer(function(input, output, session){
                                                                          filename = 'Integromics Gene Set Analysis tools'),
                                                                     list(extend = 'excel',
                                                                          filename = 'Integromics Gene Set Analysis tools')),
+                                                     text = "Download")), 
+                                 # customize the length menu
+                                 lengthMenu = list(c(25, 50, -1), # declare values
+                                                   c(25, 50, "All") # declare titles
+                                 ) 
+                  )
+    ))
+ 
+  output$DT8 <- DT::renderDataTable(
+    DT::datatable(data()$History,
+                  rownames = FALSE,
+                  caption = htmltools::tags$caption(
+                    style = 'caption-side: top; text-align: center;',
+                    htmltools::h4('Citation Evolution')
+                  ),
+                  escape = FALSE,
+                  extensions = c('AutoFill','Buttons'),
+                  selection = list(target = 'row'),
+                  options = list(autoFill = TRUE,
+                                 searchHighlight = TRUE,
+                                 paging = TRUE,
+                                 pageLength = 25,
+                                 #searchable = TRUE,
+                                 dom = 'Blftsip',
+                                 buttons = list(list(extend = "collection",
+                                                     buttons = list(list(extend='csv',
+                                                                         filename = 'Citation Evolution'),
+                                                                    list(extend = 'excel',
+                                                                         filename = 'Citation Evolution')),
                                                      text = "Download")), 
                                  # customize the length menu
                                  lengthMenu = list(c(25, 50, -1), # declare values
