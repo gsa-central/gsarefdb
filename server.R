@@ -27,7 +27,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h4('General methods and tools')
+                    htmltools::h3('General methods and tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -54,7 +54,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h4('Reviews and benchmarks')
+                    htmltools::h3('Reviews and benchmarks')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -84,7 +84,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h4('Genomic Gene Set Analysis tools')
+                    htmltools::h3('Genomic GSA tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -113,7 +113,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h4('Gene Set Analysis tools for ncRNA data')
+                    htmltools::h3('GSA tools for ncRNA data')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -142,7 +142,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h4('Gene Set Analysis tools for MS-based data')
+                    htmltools::h3('GSA tools for MS-based data')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -171,7 +171,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h4('Metagenomics Gene Set Analysis tools')
+                    htmltools::h3('Metagenomics GSA tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
@@ -200,7 +200,7 @@ shinyServer(function(input, output, session){
                   rownames = FALSE,
                   caption = htmltools::tags$caption(
                     style = 'caption-side: top; text-align: center;',
-                    htmltools::h4('Integromics Gene Set Analysis tools')
+                    htmltools::h3('Integromics GSA tools')
                   ),
                   escape = FALSE,
                   extensions = c('AutoFill','Buttons'),
